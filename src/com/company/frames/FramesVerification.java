@@ -22,16 +22,21 @@ public class FramesVerification {
         Thread.sleep(1000);
         System.out.println("HTML IFrames: " + driver.findElement(By.xpath("//h2")).getText());
         driver.switchTo().frame(driver.findElement(By.id("iframeResult")));
+
         //--- Inside first frame ------
         System.out.println("------------Inside first frame-----------");
         Thread.sleep(1000);
         System.out.println("HTML IFrames- first frame: " + driver.findElement(By.xpath("//h2")).getText());
+        //System.out.println("Run button name: " + driver.findElement(By.xpath("//button[contains(text(),'Run »')]")).getText());
+
         //System.out.println("Second frame: " + driver.findElement(By.xpath("//h1")).getText());
+
         //System.out.println("Run button name: " + driver.findElement(By.xpath("//button[contains(text(),'Run »')]")).getText());
         driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@title ='Iframe Example']")));
         System.out.println("------------Inside second frame-----------");
         Thread.sleep(1000);
         System.out.println("Second frame: " + driver.findElement(By.xpath("//h1")).getText());
+        /*
         //driver.switchTo().parentFrame();
         driver.switchTo().defaultContent();
         System.out.println("------------Inside default content -----------");
@@ -39,7 +44,7 @@ public class FramesVerification {
         System.out.println("Run button name: " + driver.findElement(By.xpath("//button[contains(text(),'Run »')]")).getText());
         System.out.println("HTML IFrames- first frame: " + driver.findElement(By.xpath("//h2")).getText());
 
-
+*/
 
     }
 
